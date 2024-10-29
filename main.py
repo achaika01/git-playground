@@ -13,6 +13,9 @@ def is_game_over():
 
 
 def guess_is_valid(candidate):
+    if guess in guesses:
+        print("You cant use this word one more time")
+        return False
     for letter in candidate:
         if letter not in word:
             print(f"You can not use letter {letter}")
